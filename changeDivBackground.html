@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            #divcls {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                background: #f0e68c;
+            }
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="divcls">
+            <h1 id="randomHeading"></h1>
+        <button id="randomButton">change div color</button>
+        </div>
+        <script>
+             const mycolor=['red','green','yellow','#808080','pink','blue'];
+             //calculate the length of array 'mycolor'
+             mycolorLength=mycolor.length;
+            //  CHECK: length of array named 'mycolor' on console
+             console.log(mycolorLength);
+             //generate random color of heading <h1></h1> 
+            document.getElementById('randomButton').onclick = function (){
+                //generate random index between (0-mycolorLength) for array mycolor 
+                let randomIndex=Math.floor(Math.random()*mycolorLength);
+                //CHECK: 
+                console.log(randomIndex);
+            document.getElementById('randomHeading').innerHTML=mycolor[randomIndex];
+            document.getElementById('divcls').style.background=mycolor[randomIndex];
+            }
+        </script>
+    </body>
+</html>

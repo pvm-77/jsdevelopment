@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            #divcls {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                background: #f0e68c;
+            }
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="divcls">
+            <h1 id="randomHeading"></h1>
+        <button id="randomButton">create color</button>
+        </div>
+        <script>
+            document.getElementById('randomButton').onclick = function (){
+                const mycolor=['1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+                //calculate the length of array 'mycolor'
+                mycolorLength=mycolor.length;
+                let hexcolorcode='#';
+                for(let i=0;i<=5;i++){
+                    let randomIndex=mycolor[Math.floor(Math.random()*mycolorLength)];
+                    //console.log(randomIndex);
+                    hexcolorcode+=randomIndex;
+                }
+                //console.log(hexcolorcode);
+                document.getElementById('randomHeading').innerHTML=hexcolorcode;
+                document.getElementById('divcls').style.background=hexcolorcode;
+            }
+        </script>
+    </body>
+</html>

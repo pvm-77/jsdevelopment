@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <style>
+            #divcls {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                background: #f0e68c;
+            }
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="divcls">
+            <h1>thought of the day</h1>
+            <h1 id="thought"></h1>
+            <h2 id="author"></h2>
+        <button id="thoughtButton">display thought</button>
+        </div>
+        <script>
+            document.getElementById('thoughtButton').onclick = function (){
+                const thoughtAndAuthor={
+                    thought:"time and tide wait for none ",
+                    author:"mahan atma"
+                };
+               
+                document.getElementById('thought').innerHTML=thoughtAndAuthor.thought;
+                document.getElementById('author').innerHTML=thoughtAndAuthor.author;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> double table|magic</title>
+</head>
+<body>
+
+	<h1>double the table dimension</h1>
+	<input type="text" name="tableWidth" placeholder="table width" id="tableWidth">
+	<input type="text" name="tableHeight" placeholder="table Height" id="tableHeight">
+
+	<!-- <h2>dimension before magic </h2> -->
+	<p id="beforeButtonClick"></p>
+
+	<button onclick="magic()"> click me</button>
+	<script type="text/javascript">
+		var tableWidth=document.getElementById('tableWidth').value;
+		// console.log(tableWidth);
+
+		var tableHeight=document.getElementById('tableHeight').value;
+		// console.log(tableHeight);
+		// document.getElementById('beforeButtonClick').innerHTML="TABLE WIDTH: " +tableWidth;
+
+		const dimension={width:tableWidth,
+			height:tableHeight};
+
+		function doubleTableDimension(dimension){
+				for(let key in dimension){
+					if(dimension[key]==='number'){
+						dimension[key]=2*dimension[key];
+
+						document.getElementById('beforeButtonClick').innerHTML=dimension[key]+'<br>';
+					}
+				}
+			}
+
+
+			function magic(){
+           doubleTableDimension(dimension);
+			}
+
+
+
+	</script>
+
+</body>
+</html>

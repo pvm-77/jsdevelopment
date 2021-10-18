@@ -64,12 +64,46 @@
 //     function() { alert("You canceled the execution."); }
 //   );
 
-var ask=(question,yes,no)=>{
-    if (confirm(question)) {
-        yes();
+// var ask=(question,yes,no)=>{
+//     if (confirm(question)) {
+//         yes();
         
-    } else {
-        no();
-    }
-}
-ask('Do you agree',()=>{alert('u agreed');},()=>{alert('u not agreed');});
+//     } else {
+//         no();
+//     }
+// }
+// ask('Do you agree',()=>{alert('u agreed');},()=>{alert('u not agreed');});
+
+// let hi="greeting friend";
+// console.log(hi.toUpperCase());
+
+
+// function calculateSum(a,b) {
+//     return a+b;
+    
+// }
+
+// console.log(`1+2 = ${calculateSum(4,6)}`);
+
+// guestList=`Guest:
+// *john
+// *mona
+// *neeta`;
+// console.log(guestList);
+// console.log('\u{1F60D}');
+
+
+// arrays in java script
+// array declaration in js 
+// let arr=new Array();
+// let arr=[];
+
+
+// let fruits=['apple','banana','guava'];
+// // alert(fruits[1]);
+// fruits[1]='samosa';
+// // alert(fruits);
+// console.log(fruits.length);
+
+
+

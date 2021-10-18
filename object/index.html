@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>object|javascript</title>
+</head>
+<body>
+	<h1>this is object basic tutorial</h1>
+<!-- how to create js object -->
+
+
+
+	<script type="text/javascript">
+
+		// let book=new Object(); //object constructor syntax
+		// let user={}; //object literal syntax
+		// let key=prompt('what you want to know about user first');
+
+		// user={'First Name':'Sarfaraz','Last Name':'Hussain',key:'some thing',};
+		// console.log(user.First Name);  //it gives error bcz of muliword key
+
+		// console.log(user['First Name']);
+		// console.log(user['key']);
+		// console.log(book);
+		// book={
+		// 	title:'journey to the west',
+		// 	price:1500,
+		// 	author:'Michael Faraday',
+		// 	description:'learning guide how to tackle problem in journey',
+
+		// };
+		/* accessing properties of object
+		METHOD 1: objectName.propertyName
+
+		METHOD 2: objectName["propertyName"]
+
+		*/
+		// console.log(book.title);
+		// console.log(book['price']);
+
+		// task 1
+
+		/*
+		let user={};
+		console.log(user);
+		user={name:'john',surname:'smith'};
+		console.log(user);
+		user.name='pete';
+		console.log(user);
+
+		delete user.name;
+		console.log(user);
+		*/
+
+		// task 2
+		// function isEmpty(obj){
+		// 	for(let key in obj){
+		// 			return false;
+		// 	}
+		// 			    return true;
+		// }
+
+		// let schedule={};
+		// console.log(isEmpty(schedule));
+		// schedule["8:30"]='get up';
+		// console.log(isEmpty(schedule));
+
+
+
+
+
+
+		// let salaries = {
+		// 	john:100,
+		// 	ann:160,
+		// 	pete:130,
+		// };
+		// function sum(obj){
+		// 	let totalSum=0;
+		// 	for(let key in obj){
+		// 		totalSum+=obj[key];
+		// 	}
+		// 		return totalSum;
+
+		// }
+
+
+		// console.log(sum(salaries));
+
+// task 3 
+
+// before the call
+
+
+
+let menu={
+	width:200,
+	height:300,
+	title:'my menu',
+};
+
+multiplyNumeric(menu);
+
+function multiplyNumeric(obj){
+	for(let key in obj){
+		if(typeof(obj[key])==='number'){
+			obj[key]=2*obj[key];
+		}
+	}
+}
+console.log(menu);
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

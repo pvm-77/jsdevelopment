@@ -1,0 +1,16 @@
+.form-control > input{
+    /* padding: 2px 0px 2px 0px; */
+
+}
+
+.container{
+ 
+    margin-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: blanchedalmond;
+    height: auto;
+    width:150px;
+}

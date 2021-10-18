@@ -9,7 +9,33 @@
 
   </head>
   <body>
-    <h1>loading an empty script</h1>
+    <!-- <h1>loading an empty script</h1> -->
+
+
+    <h2>javascript arrays</h2>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+      const car=['volvo','honda','swift'];
+      document.getElementById('demo').innerHTML=car;
+      // const a=[];
+      // alert(typeof(a));
+
+
+      // variable type in arrys
+      function myfunction(){
+        let=7;
+      }
+      const mycar={
+        name:'honda city',
+        price:488888
+      }
+      const demoArray=['Date.now',myfunction(),mycar.name]
+      for(let i in demoArray){
+       
+        console.log(demoArray[i])
+      }
+    </script>
       
     <!-- Optional JavaScript -->
   </body>

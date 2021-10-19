@@ -1,16 +1,65 @@
-.form-control > input{
-    /* padding: 2px 0px 2px 0px; */
+
+
+.container{
+    background-color: lightgray;
+    width: 50%;  
+   
+    box-sizing: border-box; 
+}
+
+input[type=text],input[type=password]{
+    /* background: transparent; */
+    outline: none;
+    width: 100%;
+    margin-top: 4px;
+    padding: 14px 9px;
+
+    box-sizing: border-box;
 
 }
 
-.container{
- 
-    margin-right: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: blanchedalmond;
-    height: auto;
-    width:150px;
+input[type=text]:focus{
+    background-color: thistle;
+}
+input[type=password]:focus{
+    background-color: thistle;
+}
+
+input[type=submit]{
+    /* outline:none; */
+    color: white;
+    background-color:darkolivegreen;
+    padding:16px 32px ;
+    margin: 4px 2px ;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.text-center{
+    /* color:white; */
+    text-align: left;
+}
+
+
+.forget-password{
+    text-decoration: none;
+    /* float: right; */
+}
+
+.error{
+    border: 2px solid red;
+    /* visibility: hidden; */
+}
+.success{
+    border: 2px solid green;
+}
+
+.form-control i{
+    position: absolute;
+    left: 600px;
+    top: 140px;
+    color: black;
+   
+    
+    cursor: pointer;
 }

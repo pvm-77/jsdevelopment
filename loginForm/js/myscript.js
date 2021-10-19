@@ -1,43 +1,58 @@
-// javascript form handling
-// get form by using js
-
-
-let form=document.forms['registrationForm'];
-
-// console.log(form);
-form.addEventListener('submit',(e)=>{
-    // stop form submission
-
-
-    e.preventDefault();
-    alert('working fine');
-    let name=form.elements['userId'];
-    let password=form.elements['password'];
-    
-    let isnameValid=isEmpty(name);
-    let ispasswordValid=isEmpty(password);
-    if ((isnameValid && ispasswordValid)!=='') {
-        // you can submit form here 
-        
-    }
-
-    
+let form = document.forms["loginForm"];
+form.addEventListener("submit", function (event) {
+  // stop default  form submission
+  event.preventDefault();
+  let name = form.elements["userId"].value;
+  let password = form.elements["password"].value;
 });
 
+function showOnError() {}
+function showOnSuccess() {}
+
+function validEmail(InputEmail) {}
+function isEmpty(InputElement) {
+  if (InputElement !== "") {
+    return false;
+  } else {
+    return true;
+  }
+}
+// password hide and show functionality
 
 
 
+let togglePassword = document.querySelector("#togglePassword");
+let password = document.querySelector("#password");
+
+togglePassword.addEventListener("click", showAndHidePassword
+// (e) => {
+//   // stop the default behaviour
+//   e.preventDefault();
+//   //    toggle the type atttribute
+//   let type = password.getAttribute("type");
+//   if (type === "password") {
+//     type = "text";
+//     password.setAttribute("type", type);
+//     togglePassword.classList.replace("fa-eye-slash","fa-eye");
+//   } else {
+//     type = "password";
+//     password.setAttribute("type", type);
+//     togglePassword.classList.replace("fa-eye","fa-eye-slash");
+
+//   }
+// }
 
 
-// get button id
-let btnId= document.getElementById('login-btn');
-btnId.addEventListener('click',someFunction);
+);
 
-function someFunction() {
-    
-let userId =document.getElementById('userId').value;
-// alert(userId);
-let password=document.getElementById('password').value;
-// alert(password);
+function showAndHidePassword(){
+    // get the type of the attribute 
+    const type=password.getAttribute('type')==='password'?'text':'password';
+    // set the attribute 
+    password.setAttribute('type',type);
+    // handle icon as well initially slash eye
+   this.classList.add('fa-eye');
+
+
 
 }

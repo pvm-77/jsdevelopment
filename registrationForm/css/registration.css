@@ -1,0 +1,106 @@
+.container {
+  /* background-color: gray; */
+  box-sizing: border-box;
+}
+
+.card-header {
+  margin: 12px 12px 12px 12px;
+}
+
+.card {
+  /* border: 2px solid red; */
+  width: 600px;
+  margin: auto auto auto auto;
+  background-color: white;
+  background: linear-gradient(to bottom right, #003399 28%, #009999 100%);
+  
+}
+.card-body {
+  padding: 12px 12px 12px 12px;
+  /* border: 2px solid green ; */
+  /* background-color: rgb(69, 69, 126); */
+  border-radius: 20px;
+  box-shadow: 2px;
+  overflow: auto;
+}
+* {
+  box-sizing: border-box;
+}
+.background-color-handler {
+  /* background: linear-gradient(to bottom right, #003399 28%, #009999 100%);
+   */
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  /* background-color: transparent; */
+  border: 0.8px solid rgb(97, 96, 96);
+  outline: none;
+}
+.btn {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-style: none;
+  text-decoration: none;
+  /* text-align: right; */
+  /* float: left; */
+}
+
+.btn-success {
+  color: white;
+  cursor: pointer;
+  background-color: green;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+
+.btn-facebook {
+  color: white;
+  cursor: pointer;
+  background-color: blue;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.btn-google {
+  color: white;
+  cursor: pointer;
+  background-color: red;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 2px;
+  display: inline-block;
+}
+.register-image {
+  float: right;
+  border-radius: 2px;
+}
+.text-center {
+  text-align: center;
+}

@@ -58,6 +58,7 @@ function validateEmail(yourInputContent, requiredMsg, invalidMsg) {
     }
     return true;
 }
+
 function passwordMatch(yourInputContent, password, requiredMsg, doNotMatchPasswordMsg) {
     // check first confirm password field empty
     if (!isEmpty(yourInputContent, requiredMsg)) {
@@ -68,14 +69,10 @@ function passwordMatch(yourInputContent, password, requiredMsg, doNotMatchPasswo
     const userPassword = password.value.trim();
     if (confirmPassword !== userPassword) {
         return showError(yourInputContent, doNotMatchPasswordMsg);
-
     } else {
 
     }
     return true;
-
-
-
 }
 
 function emailAlreadyExists() { }

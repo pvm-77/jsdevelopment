@@ -1,42 +1,56 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>js development learning</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="index.js"></script>
+<!DOCTYPE html>
+<html>
 
-  </head>
-  <body>
-    <!-- <h1>loading an empty script</h1> -->
+<head>
+  <!-- add font awesome    -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div>
+    <h1 class="text-center freq-ask">frequently asked question</h1>
+    <div>
+      <div class="shadow rounded px-1 py-1 mx-auto">
+        <p class="question">do u have free courses?</p>
+        <button type="button" class="question-btn">
+          <span class="plus-icon"><i class="fas fa-plus-square"></i></span>
+          <span class="minus-icon"><i class="fas fa-minus-square"></i></span>
+        </button>
+        <div class="answer-txt">
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <!-- <div class="shadow rounded px-1 py-1">
+        <p class="question">do u have free courses? </p>
+        <button type="button" class="question-btn">
+          <span class="golden"><i class="fas fa-plus-square"></i></span>
+          <span class="golden"><i class="fas fa-minus-square"></i></span>
+        </button>
+        <div class="answer-txt">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            doloremque?</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="shadow rounded px-1 py-1">
+        <p class="question">do u have java courses? </p>
+        <button type="button" class="question-btn">
+          <span class="golden"><i class="fas fa-plus-square"></i></span>
+          <span class="golden"><i class="fas fa-minus-square"></i></span>
+        </button>
+      </div> -->
+    </div>
+  </div>
 
 
-    <h2>javascript arrays</h2>
-    <p id="demo"></p>
+  <script src="js/app.js"></script>
+</body>
 
-    <script type="text/javascript">
-      const car=['volvo','honda','swift'];
-      document.getElementById('demo').innerHTML=car;
-      // const a=[];
-      // alert(typeof(a));
-
-
-      // variable type in arrys
-      function myfunction(){
-        let=7;
-      }
-      const mycar={
-        name:'honda city',
-        price:488888
-      }
-      const demoArray=['Date.now',myfunction(),mycar.name]
-      for(let i in demoArray){
-       
-        console.log(demoArray[i])
-      }
-    </script>
-      
-    <!-- Optional JavaScript -->
-  </body>
 </html>

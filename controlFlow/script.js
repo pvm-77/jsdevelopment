@@ -51,3 +51,13 @@ var canDrive;
 // console.log(canDrive);
 // ternary op use to set dfault value of parameter
 
+let selectItem=document.querySelector('select');
+// alert(selectItem.value);
+console.log(selectItem);
+
+selectItem.addEventListener('change',function(event){ 
+    let selectedValue=event.target.value;
+    console.log(selectedValue);
+
+
+});

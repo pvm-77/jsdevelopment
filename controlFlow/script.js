@@ -49,11 +49,34 @@ let lengthObject = {
     'yd': 'Yard',
     'mi': 'Mile'
 };
-let lstPhysicalQuantity=[];
-lstPhysicalQuantity.push(lengthObject,speedObject,massObject,digitalStoreObject,numberSystemObject);
+// let lstPhysicalQuantity = [];
+// lstPhysicalQuantity.push(lengthObject, speedObject, massObject, digitalStoreObject, numberSystemObject);
 // console.log(lstPhysicalQuantity);
+// handleChildSelectPhysicalEntity(lstPhysicalQuantity);
 
 
+function handleChildSelectPhysicalEntity(lstPhysicalQuantity, querySelect,answerSelect) {
+
+    if (querySelect.hasChildNodes()) {
+        querySelect.innerHTML = '';
+            // loop throguh each object in array
+            for (let key in lstPhysicalQuantity) {
+                // console.log(key);
+                // console.log(lstPhysicalQuantity[i][key]);
+                addOption(querySelect, key, lstPhysicalQuantity[key]);
+                addOption(answerSelect, key, lstPhysicalQuantity[key]);
+                // handle child select element value
+            }
+        
+
+    }
+
+
+
+
+
+
+}
 // let getInput=document.querySelector("input");
 
 // add event listener to the input
@@ -118,129 +141,141 @@ selectQuantityElement.addEventListener("change", function (event) {
     console.log(selectedQuantityValue);
     switch (selectedQuantityValue) {
         case 'numberSystem':
-            let numberSystemObject = {
-                'bin': 'Binary',
-                'ter': 'Ternary',
-                'qua': 'Quaternary',
-                'qui': 'Quinary',
-                'sen': 'Senary',
-                'sep': 'Septenary',
-                'oct': 'Octal',
-                'non': 'Nonary',
-                'dec': 'Decimal',
-                'und': 'Undecimal',
-                'duo': 'Duodecimal',
-                'hex': 'Hexadecimal',
-                'vig': 'Vigesimal',
-                'sex': 'Sexagesimal',
-            };
-
-            if (querySelect.hasChildNodes()) {
-                // remove all child nodes
-                querySelect.innerHTML = '';
-                ansSelect.innerHTML = '';
-                // loop through the object
-                for (let key in numberSystemObject) {
-                    // add option to the select element 
-                    addOption(querySelect, key, numberSystemObject[key]);
-                    addOption(ansSelect, key, numberSystemObject[key]);
-                }
+            handleChildSelectPhysicalEntity(numberSystemObject, querySelect,ansSelect);
+            
 
 
-            }
+            // let numberSystemObject = {
+            //     'bin': 'Binary',
+            //     'ter': 'Ternary',
+            //     'qua': 'Quaternary',
+            //     'qui': 'Quinary',
+            //     'sen': 'Senary',
+            //     'sep': 'Septenary',
+            //     'oct': 'Octal',
+            //     'non': 'Nonary',
+            //     'dec': 'Decimal',
+            //     'und': 'Undecimal',
+            //     'duo': 'Duodecimal',
+            //     'hex': 'Hexadecimal',
+            //     'vig': 'Vigesimal',
+            //     'sex': 'Sexagesimal',
+            // };
+
+            // if (querySelect.hasChildNodes()) {
+            //     // remove all child nodes
+            //     querySelect.innerHTML = '';
+            //     ansSelect.innerHTML = '';
+            //     // loop through the object
+            //     for (let key in numberSystemObject) {
+            //         // add option to the select element 
+            //         addOption(querySelect, key, numberSystemObject[key]);
+            //         addOption(ansSelect, key, numberSystemObject[key]);
+            //     }
+
+
+            // }
 
 
             break;
         case 'length':
+            handleChildSelectPhysicalEntity(lengthObject, querySelect,ansSelect);
+
             // // alert("length");
             // console.log("you have selected length");
             // add child to the select element in another select tag
             // object to hold all values of length
-            let lengthObject = {
-                'mm': 'Millimeter',
-                'cm': 'Centimeter',
-                'm': 'Meter',
-                'km': 'Kilometer',
-                'in': 'Inch',
-                'ft': 'Feet',
-                'yd': 'Yard',
-                'mi': 'Mile'
-            };
+            // let lengthObject = {
+            //     'mm': 'Millimeter',
+            //     'cm': 'Centimeter',
+            //     'm': 'Meter',
+            //     'km': 'Kilometer',
+            //     'in': 'Inch',
+            //     'ft': 'Feet',
+            //     'yd': 'Yard',
+            //     'mi': 'Mile'
+            // };
             // check select option empty or not 
-            if (querySelect.hasChildNodes()) {
-                // remove all child nodes
-                querySelect.innerHTML = '';
-                ansSelect.innerHTML = '';
-                // loop through the object
-                for (let key in lengthObject) {
-                    // add option to the select element 
-                    addOption(querySelect, key, lengthObject[key]);
-                    addOption(ansSelect, key, lengthObject[key]);
-                }
+            // if (querySelect.hasChildNodes()) {
+            //     // remove all child nodes
+            //     querySelect.innerHTML = '';
+            //     ansSelect.innerHTML = '';
+            //     // loop through the object
+            //     for (let key in lengthObject) {
+            //         // add option to the select element 
+            //         addOption(querySelect, key, lengthObject[key]);
+            //         addOption(ansSelect, key, lengthObject[key]);
+            //     }
 
-            }
+            // }
 
 
             break;
         case 'speed':
-            let speedObject = {
-                'mph': 'Miles per hour',
-                'kph': 'Kilometers per hour',
-                'fps': 'Feet per second',
-                'knot': 'Knot'
-            };
-            if (querySelect.hasChildNodes()) {
-                querySelect.innerHTML = '';
-                ansSelect.innerHTML = '';
-                for (let key in speedObject) {
-                    addOption(querySelect, key, speedObject[key]);
-                    addOption(ansSelect, key, speedObject[key]);
-                }
+            handleChildSelectPhysicalEntity(speedObject, querySelect,ansSelect);
 
-            }
+            // let speedObject = {
+            //     'mph': 'Miles per hour',
+            //     'kph': 'Kilometers per hour',
+            //     'fps': 'Feet per second',
+            //     'knot': 'Knot'
+            // };
+            // if (querySelect.hasChildNodes()) {
+            //     querySelect.innerHTML = '';
+            //     ansSelect.innerHTML = '';
+            //     for (let key in speedObject) {
+            //         addOption(querySelect, key, speedObject[key]);
+            //         addOption(ansSelect, key, speedObject[key]);
+            //     }
+
+            // }
 
 
 
             break;
         case 'mass':
-            let massObject = {
+            handleChildSelectPhysicalEntity(massObject, querySelect,ansSelect);
 
-                'mg': 'Milligram',
-                'g': 'Gram',
-                'kg': 'Kilogram',
-                't': 'Ton',
-                'oz': 'Ounce',
-                'lb': 'Pound',
-                'st': 'Stone'
-            };
-            if (querySelect.hasChildNodes()) {
-                querySelect.innerHTML = '';
-                ansSelect.innerHTML = '';
-                for (let key in massObject) {
-                    addOption(querySelect, key, massObject[key]);
-                    addOption(ansSelect, key, massObject[key]);
-                }
-            }
+            // let massObject = {
+
+            //     'mg': 'Milligram',
+            //     'g': 'Gram',
+            //     'kg': 'Kilogram',
+            //     't': 'Ton',
+            //     'oz': 'Ounce',
+            //     'lb': 'Pound',
+            //     'st': 'Stone'
+            // };
+            // if (querySelect.hasChildNodes()) {
+            //     querySelect.innerHTML = '';
+            //     ansSelect.innerHTML = '';
+            //     for (let key in massObject) {
+            //         addOption(querySelect, key, massObject[key]);
+            //         addOption(ansSelect, key, massObject[key]);
+            //     }
+            // }
 
 
             break;
         case 'digitalStore':
-            let digitalStoreObject = {
-                'b': 'Byte',
-                'kb': 'Kilobyte',
-                'mb': 'Megabyte',
-                'gb': 'Gigabyte',
-                'tb': 'Terabyte',
-                'pb': 'Petabyte'
-            };
-            if (querySelect.hasChildNodes()) {
-                querySelect.innerHTML = '';
-                ansSelect.innerHTML = '';
-                for (let key in digitalStoreObject) {
-                    addOption(querySelect, key, digitalStoreObject[key]);
-                    addOption(ansSelect, key, digitalStoreObject[key]);
-                }
-            }
+            handleChildSelectPhysicalEntity(digitalStoreObject, querySelect,ansSelect);
+
+            // let digitalStoreObject = {
+            //     'b': 'Byte',
+            //     'kb': 'Kilobyte',
+            //     'mb': 'Megabyte',
+            //     'gb': 'Gigabyte',
+            //     'tb': 'Terabyte',
+            //     'pb': 'Petabyte'
+            // };
+            // if (querySelect.hasChildNodes()) {
+            //     querySelect.innerHTML = '';
+            //     ansSelect.innerHTML = '';
+            //     for (let key in digitalStoreObject) {
+            //         addOption(querySelect, key, digitalStoreObject[key]);
+            //         addOption(ansSelect, key, digitalStoreObject[key]);
+            //     }
+            // }
 
 
             break;
@@ -285,7 +320,7 @@ document.querySelector('input').addEventListener("input", function (event) {
     var inputValue = document.querySelector('input').value;
     // check if the input value is a number
     if (!isNaN(inputValue)) {
-        console.log(inputValue);
+        // console.log(inputValue);
 
     }
 

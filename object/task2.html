@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Object basics: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="preview">
+    </section>
+
+</body>
+<script>
+    let bandInfo;
+
+
+    // Add your code here
+    const MyFavouriteBand = {
+        name: 'imaginary beatles',
+        nationality: 'central earth region',
+        genre: 'rock',
+        formed: '1960',
+        members: ['john', 'paul', 'george', 'ringo'],
+        split: 1970,
+        albums: [{
+            name: 'imagine moon',
+            released: 2088
+        },
+        {
+            name: 'abbey road',
+            released: 1969
+        }
+        ]
+
+
+
+    }
+    bandInfo = `first of all it is fake.
+                 ${MyFavouriteBand.name} is a ${MyFavouriteBand.genre} band from ${MyFavouriteBand.nationality} 
+                    they released few albums such as ${MyFavouriteBand.albums[0].name} released  in ${MyFavouriteBand.albums[0].released},
+            ${MyFavouriteBand.albums[1].name} released  in ${MyFavouriteBand.albums[1].released} `
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+</script>
+
+</html>

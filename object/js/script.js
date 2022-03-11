@@ -72,6 +72,6 @@ const myFavBand={
     albums:[{name:'yuppi',released:2013}],
 }
 
-let bandInfo=`${myFavBand.name} ${myFavBand.members}`
+let bandInfo=`${myFavBand.name} ${myFavBand.members}. it was formed in ${myFavBand.formed} and split in ${myFavBand.split}`
 myFavBand['bandInfo']=bandInfo
 console.log(myFavBand.bandInfo);

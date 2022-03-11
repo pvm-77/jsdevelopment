@@ -9,6 +9,32 @@
 </head>
 <body>
     <h1>object prototype</h1>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script>
+    const myObject={
+        city:'bangalore',
+        greet(){
+            console.log(`welcome to ${this.city}`);
+        }
+    }
+
+    // myObject.greet();
+    console.log(myObject)
+
+const myDate=new Date();
+// console.log(myDate.getFullYear());
+myDate.getFullYear=function(){
+    
+console.log('hello');
+}
+console.log(myDate.getFullYear());
+
+let object=myDate
+do {
+    object=Object.getPrototypeOf(object);
+    console.log(object);
+} while (object);
+
+</script>
 </body>
 </html>

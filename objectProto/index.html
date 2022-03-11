@@ -11,29 +11,70 @@
     <h1>object prototype</h1>
 <!-- <script src="script.js"></script> -->
 <script>
-    const myObject={
-        city:'bangalore',
-        greet(){
-            console.log(`welcome to ${this.city}`);
-        }
-    }
 
-    // myObject.greet();
-    console.log(myObject)
+//     const myObject={
+//         city:'bangalore',
+//         greet(){
+//             console.log(`welcome to ${this.city}`);
+//         }
+//     }
 
-const myDate=new Date();
-// console.log(myDate.getFullYear());
-myDate.getFullYear=function(){
+//     // myObject.greet();
+//     console.log(myObject)
+
+// const myDate=new Date();
+// // console.log(myDate.getFullYear());
+// myDate.getFullYear=function(){
     
-console.log('hello');
-}
-console.log(myDate.getFullYear());
+// console.log('hello');
+// }
+// console.log(myDate.getFullYear());
 
-let object=myDate
-do {
-    object=Object.getPrototypeOf(object);
-    console.log(object);
-} while (object);
+// let object=myDate
+// do {
+//     object=Object.getPrototypeOf(object);
+//     console.log(object);
+// } while (object);
+
+
+
+
+
+// object prototype 
+
+// object function 
+// global Function in js is called 'Object' which also an object
+
+function Employee(name){
+    this.name=name;
+
+}
+
+
+Employee.prototype.getName=function(){
+   return this.name;
+}
+// create employee object
+const emp1=new Employee('sai');
+console.log(emp1.getName());
+function Manager(name,department){
+    this.name=name;
+    this.department=department;
+}
+Manager.prototype.getDepartmentName=function(){
+    return this.department;
+}
+var mgr=new Manager('Sarfaraz ','IT');
+console.log(mgr.getDepartmentName());
+// read getnName from Employee in Manager
+// mgr.__proto__.__proto__=Employee.prototype;
+// console.log(mgr.getName());
+
+function CreateCourse(courseId,courseName){
+    this.courseId=courseId;
+    this.courseName=courseName;
+}
+
 
 </script>
 </body>

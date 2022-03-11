@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Object</title>
+</head>
+<body>
+    <h1>how to create objects in js</h1>
+</body>
+<script>
+    // METHOD:1 create javascript object using object literal
+
+    const student={
+        firstName:"Manav",
+        lastName:"Earth",
+        age:20,
+        rollNo:1,
+        enrollmentNumber:'GT9867',
+        getFullName:function(){
+            return `${this.firstName} ${this.lastName}`;
+        }
+
+    }
+    console.log(student.getFullName());
+
+    // METHOD:2 create javascript object using new keyword
+    const student1=new Object();
+    student1.firstName="Manav";
+    student1.lastName="Earth";
+    student1.age=20;
+    student1.rollNo=1;
+    student1.enrollmentNumber='GT9867';
+    student1.getFullName=function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+    console.log(student1.getFullName());
+    // METHOD 3: create javascript object using constructor function
+    // step 1: define object constructor 
+    function Student(firstName,lastName,age,rollNo,enrollmentNumber){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.age=age;
+        this.rollNo=rollNo;
+        this.enrollmentNumber=enrollmentNumber;
+        this.getFullName=function(){
+            return `${this.firstName} ${this.lastName}`;
+        }
+    }
+    // step :2 create object using constructor function
+    const student2=new Student('Manav','Earth',20,1,'GT9867');
+    console.log(student2.getFullName());
+
+    // METHOD 4: create javascript object using Object.create() method
+    const student3=Object.create(Object.prototype);
+    student3.firstName="Manav";
+    student3.lastName="Earth";
+    student3.age=20;
+    student3.rollNo=1;
+    student3.enrollmentNumber='GT9867';
+    student3.getFullName=function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+    console.log(student3.getFullName());
+
+
+</script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>object and object prototype</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>hi there are really learning object in javascript</h1>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+        // ---------------------------------------------------------------------------------
+        // ways of function calling
+
+        function foo() {
+            console.log('i am main foo content');
+        }
+
+        foo();  // method 1 {standalone functincall this refere}
+
+        var obj = {}
+        obj.foo = function () {
+            console.log('hello in object method')
+        }
+        obj.foo(); // method 2
+
+        new foo(); // method 3
+
+
+        // ------------------------------------------
+
+        // -----------------------------------------------------------------------------------------------------------------
+        // diff btween regular f and construvtor
+
+
+        // regular function
+        function createBicycle(cadence, speed, gear) {
+            let newBicycle = {};
+            newBicycle.cadence = cadence;
+            newBicycle.speed = speed;
+            newBicycle.gear = gear;
+            return newBicycle;
+
+        }
+        // let bicycle = createBicycle(50,20,5);
+        // console.log(bicycle);
+        // let bicycle2 = createBicycle(30,24,15);
+        // console.log(bicycle2);
+        // TODO: call regular function using new keyword
+        let b = new createBicycle(58, 20, 5);
+        // console.log(b);
+        function bicycleConstructor(cadence, speed, gear, tirePressure) {
+            // console.log(this);
+            this.cadence = cadence;
+            this.speed = speed;
+            this.gear = gear;
+            this.tirePressure = tirePressure;
+            this.inflateTires = function () {
+                // console.log(this)
+                return this.tirePressure += 3;
+                // console.log(this.tirePressure);
+                // return this.inflateTires;
+            }
+
+        }
+        let bicycleViaConstructor1 = new bicycleConstructor(50, 20, 5, 32);
+        let bicycleViaConstructor2 = new bicycleConstructor(30, 24, 15, 2);
+        // console.log(bicycleViaConstructor1.inflateTires());
+        // console.log(bicycleViaConstructor2.inflateTires());
+// noe ek mechanic h jo inflat tire method use krna chahta h
+
+
+function Mechanic(name){
+    this.name=name;
+}
+
+let mechanicObject=new Mechanic('asif');
+//  mechanicObject.inflateTires=bicycleViaConstructor1.call();
+// console.log(mechanicObject.inflateTires());
+
+ bicycleConstructor.call(mechanicObject,50,20,5,31);
+    console.log(mechanicObject.inflateTires());
+
+// method 4 for call function 
+
+
+function temp(){
+
+    console.log('temp')
+
+
+}
+temp()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+
+
+
+        // creating employee using constructor function
+        function createEmployeeViaConstructor(id, firstName, LastName, designation, salary) {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = LastName;
+            this.designation = designation;
+            this.salary = salary;
+        }
+        let emp1 = new createEmployeeViaConstructor(1, "John", "Doe", "Manager", 50000);
+        // console.log(emp1);
+
+        function createEmployeeObject(id, firstName, LastName, designation, salary) {
+            let empObject = {}
+            empObject.id = id;
+            empObject.firstName = firstName;
+            empObject.lastName = LastName;
+            empObject.designation = designation;
+            empObject.salary = salary;
+            empObject.getFullName = function () {
+                return `${this.firstName} ${this.lastName}`;
+            }
+            empObject.getSalary = function () {
+                return `${this.salary}`;
+            }
+            empObject.getDesignation = function () {
+                return `${this.designation}`;
+            }
+            return empObject;
+        }
+
+        // let emp1 = createEmployeeObject(1, 'John', 'Doe', 'Manager', '50000');
+        // let emp2 = createEmployeeObject(2, 'Jane', 'Doe', 'Developer', '40000');
+        // console.log(emp1);
+    </script>
+</body>
+
+</html>
